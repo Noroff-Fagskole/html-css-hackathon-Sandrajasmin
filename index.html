@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.noroff.no//images/logo/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
     <title>Article page</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -24,7 +28,6 @@
     <main>
         <section>
             <article class="app-article">
-
                 <header>
                     <h1>Basics: The Second “S” in CSS</h1>
                     <time>Geoff Graham on Feb 14, 2018 (Updated on Feb 21, 2018)</time>
@@ -59,34 +62,17 @@
                 <p>The Sheet is Linked Up to the HTML</p>
                 <p>We do need to connect the HTML and CSS though. As in make sure the styles we wrote in our sheet get loaded onto the web page.</p>
                 
-                IFRAME HERE
+                    IFRAME HERE
 
                 <p>A webpage without CSS is pretty barebones:</p>
                
-                <iframe height="300" style="width: 100%;" scrolling="no" title="Style-less Webpage" src="https://codepen.io/geoffgraham/embed/oEBybR?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                    See the Pen <a href="https://codepen.io/geoffgraham/pen/oEBybR">
-                    Style-less Webpage</a> by Geoff Graham (<a href="https://codepen.io/geoffgraham">@geoffgraham</a>)
-                    on <a href="https://codepen.io">CodePen</a>.
-                </iframe>               
-                <p>How did that happen? if you look at the top of any webpage, there’s going to be a <head> tag that contains information about the HTML document:</p>                            
-                    <CODE>                    
-                        <!DOCTYPE html>
-                        <html>
-                            <head>
-                                <!-- a bunch of other stuff -->
-                            </head>
-                        
-                            <body>
-                               <!-- the page content -->
-                            </body>                   
-                        </html>
-                    </CODE>                  
-               <p>Even though the code inside the <head> might look odd, there is typically one line (or more, if we’re using multiple stylesheets) that references the sheet. It looks something like this:</p>
-                    <code>
-                        <head>
-                        <link rel="stylesheet" type="text/css" href="styles.css" />
-                        </head>
-                    </code>
+                    IFRAME HERE
+                
+                <p>How did that happen? if you look at the top of any webpage, there’s going to be a head tag that contains information about the HTML document:</p>                            
+                    
+                    CODE 
+
+                    
                 <p>This line tells the web browser as it reads this HTML file:</p>
                 <p>I’d like to link up a style sheet</p>
                 <ol>
@@ -100,65 +86,39 @@
                 </ul>
                 <p>The important thing is to give the correct location of the CSS file, whether that’s on your web server, a CDN or some other server altogether.</p>
                 <p>Here are a few examples:</p>
-                <code>
-                    <head>
-                        <!-- CSS on my server in the top level directory -->
-                        <link rel="stylesheet" type="text/css" href="styles.css">
-                      
-                        <!-- CSS on my server in another directory -->
-                        <link rel="stylesheet" type="text/css" href="/css/styles.css">
-                      
-                        <!-- CSS on another server -->
-                        <link rel="stylesheet" type="text/css" href="https://some-other-site/path/to/styles.css">
-                      </head>
-                </code>
+
+                        CODE
+
                 <h2>The Sheet is Not Required for HTML</h2>
                 <p>You saw the example of a barebones web page above. No web page is required to use a stylesheet.</p>
                 <p>Also, we can technically write CSS directly in the HTML using the HTML style attribute. This is called inline styling and it goes a little something like this if you imagine you’re looking at the code of an HTML file:</p>
-                <code>
-                    <h1 style="font-size: 24px; line-height: 36px; color: #333333">A Headline</h1>
-                    <p style="font-size: 16px; line-height: 24px; color: #000000;">Some paragraph content.</p>
-                    <!-- and so on -->
-                </code>
+
+                        CODE
+
                 <h2>While that’s possible, there are three serious strikes against writing styles this way:</h2>
                 <p>If you decide to use a stylesheet later, it is extremely difficult to override inline styles with the styles in the HTML. Inline styles take priority over styles in a sheet.
                     Maintaining all of those styles is tough if you need to make a “quick” change and it makes the HTML hard to read.
                     There’s something weird about saying we’re writing CSS inline when there really is no cascade or sheet. All we’re really writing are styles.
-                    There is a second way to write CSS in the HTML and that’s directly in the <head> in a <style> block:</p>
-                <code>
-                    <head>
-                        <style>
-                        h1 {
-                            color: #333;
-                            font-size: 24px;
-                            line-height: 36px;
-                        }
+                    There is a second way to write CSS in the HTML and that’s directly in the head in a style block: </p>
 
-                        p {
-                            color: #000;
-                            font-size: 16px;
-                            line-height: 24px;
-                        }
-                        </style>
-                    </head>
-                </code>
-            <p>That does indeed make the HTML easier to read, already making it better than inline styling. Still, it’s hard to manage all styles this way because it has to be managed on each and every webpage of a site, meaning one “quick” change might have to be done several times, depending on how many pages we’re dealing with.</p>
-            <p>An external sheet that can be called once in the < head > is usually your best bet.</p>
-            <h2>The Sheet is Important</h2>
-            <p>I hope that you’re starting to see the importance of the sheet by this point. It’s a core part of writing CSS. Without it, styles would be difficult to manage, HTML would get cluttered, and the cascade would be nonexistent in at least one case.</p>
-            <p>The sheet is the core component of CSS. Sure, it often appears to play second fiddle to the first “S” but perhaps that’s because we all have an quiet understanding of its importance.</p>
-            <h2>Leveling Up</h2>
-            <p>Now that you’re equipped with information about stylesheets, here are more resources you jump into to get a deeper understanding for how CSS behaves:</p>
-            <p>Specifics on Specificity – The cascade is a confusing concept and this article breaks down the concept of specificity, which is a method for how to manage it.
-                The latest ways to deal with the cascade, inheritance and specificity – That’s a lot of words, but the this article provides pro tips on how to manage the cascade, including some ideas that may be possible in the future.
-                Override Inline Styles with CSS – This is an oldie, but goodie. While the technique is probably not best practice today, it’s a good illustration of how to override those inline styles we mentioned earlier.
-                When Using !important is The Right Choice – This article is a perfect call-and-response to the previous article about why that method may not be best practice.</p>
-            <p>credit: https://css-tricks.com/css-basics-second-s-css/</p>
+                        CODE 
+
+                <p>That does indeed make the HTML easier to read, already making it better than inline styling. Still, it’s hard to manage all styles this way because it has to be managed on each and every webpage of a site, meaning one “quick” change might have to be done several times, depending on how many pages we’re dealing with.</p>
+                <p>An external sheet that can be called once in the head is usually your best bet.</p>
+                <h2>The Sheet is Important</h2>
+                <p>I hope that you’re starting to see the importance of the sheet by this point. It’s a core part of writing CSS. Without it, styles would be difficult to manage, HTML would get cluttered, and the cascade would be nonexistent in at least one case.</p>
+                <p>The sheet is the core component of CSS. Sure, it often appears to play second fiddle to the first “S” but perhaps that’s because we all have an quiet understanding of its importance.</p>
+                <h2>Leveling Up</h2>
+                <p>Now that you’re equipped with information about stylesheets, here are more resources you jump into to get a deeper understanding for how CSS behaves:</p>
+                <p>Specifics on Specificity – The cascade is a confusing concept and this article breaks down the concept of specificity, which is a method for how to manage it.
+                    The latest ways to deal with the cascade, inheritance and specificity – That’s a lot of words, but the this article provides pro tips on how to manage the cascade, including some ideas that may be possible in the future.
+                    Override Inline Styles with CSS – This is an oldie, but goodie. While the technique is probably not best practice today, it’s a good illustration of how to override those inline styles we mentioned earlier.
+                    When Using !important is The Right Choice – This article is a perfect call-and-response to the previous article about why that method may not be best practice.</p>
+                <p>credit: https://css-tricks.com/css-basics-second-s-css/</p>
             </article>
             <aside class="app-sidebar">sidebar</aside>
         </section>
     </main>
-
     <footer>Footer</footer>
 </body>
 </html>
