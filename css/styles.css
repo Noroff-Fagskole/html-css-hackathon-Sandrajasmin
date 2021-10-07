@@ -1,6 +1,8 @@
 @font-face {
     font-family:'Pacifico' ;
-    src: url(../fonts/Pacifico/Pacifico-Regular.ttf) format('ttf');
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf') format('ttf');
+    font-family: 'Permanent Marker', cursive;
+    src: url('../fonts/Permanent_Marker/PermanentMarker-Regular.ttf') format('ttf');
 }
 
 Body {
@@ -12,11 +14,53 @@ Body {
     line-height: 1.4;
 }
 
+.app-header {
+    border-bottom: 1px solid #999;
+    padding-bottom: 1em;
+}
+
+.inner{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.app-logo {
+    display: inline-block;
+}
+
+.app-logo img {
+    width: 160px;
+}
+
+.app-navigation {
+    float: right;
+}
+
+.app-navigation a:link {
+    text-decoration: none;
+    color: #444;
+    padding: 0.5em;
+}
+
+.app-navigation a:visited {
+    color:#444;
+}
+
+.app-navigation a:active {
+    color: greenyellow;
+}
+
+.app-navigation a:hover {
+    color: paleturquoise;
+}
+/* links have 4 states 
+a:link, a:visited, a:active , a:hover */
 h1 {
+    font-family: 'Pacifico';
     font-size: 2.5rem;
     margin-bottom: 0%;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Permanent Marker', cursive;
 }
