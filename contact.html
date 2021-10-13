@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://www.noroff.no//images/logo/favicon.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <title>Contact page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="app-header">       
+        <div class="inner">
+            <a href="/" class="app-logo">
+                <img src="./imgs/logo.png" alt="CSS Tricks">
+            </a>        
+            <nav class="app-navigation">
+                <label for="hamburger-menu">
+                    <span class="sr-only">Hamburger menu</span>
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input id="hamburger-menu" type="checkbox" />
+
+                <ul class="app-navigation-drawer">
+                    <li>
+                        <a href="/">
+                        <i class="fas fa-home color-red"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html">
+                        <i class="fas fa-info color-red"></i>About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                        <i class="fas fa-phone color-red"></i>Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./login.html">
+                        <i class="fas fa-sign-in-alt color-red"></i>Login
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="inner">
+            <section>
+                <article class="app-article">
+                    <header>
+                        <h1>Contact</h1>
+                    </header>                   
+                        <form action="POST">
+                            <fieldset>
+                                <legend>Give us your names:</legend>
+                                <label for="firstName">First Name</label>                               
+                                    <input id="firstname" class="input-text" type="text" name="firstName" placeholder="Enter your name"/>                          
+                               
+                                    <label for="lastName">Last Name</label> 
+                                
+                                    <input id="lastname" class="input-text" type="text" name="lastName" placeholder="Your second name"/>                          
+                                
+                            </fieldset>
+                            <fieldset>
+                                <legend>Give us your contact info:</legend>
+                                <label for="email">Email<span class="color-red">*</span></label>
+                                
+                                    <input id="email"  type="email" name="email" placeholder="Your email">
+                                
+                                    <label for="number">Phone number</label>
+                                
+                                    <input id="number" name="number" type="tel" placeholder="+47 000 00000">
+                                    <h3>How should we contact you</h3>
+                                
+                                    <label for="email"><input id="email1" type="radio" name="contactYou" value="email"> Email </label>
+
+                                    <label for="phone"><input id="Phone" type="radio" name="contactYou" value="Phone"> Phone </label>                                                           
+                            </fieldset>
+                            <fieldset>
+                                <legend>How can we help you?</legend>
+                                <label for="message"> Message </label>
+                                
+                                    <textarea name="message" id="message" class="input-text" cols="30" rows="10"></textarea>
+                                      
+                            </fieldset>
+                            <fieldset>
+                                <legend>Newsletter</legend>
+                                <h5>Subscribe to our newsletter</h5>
+                                <label for="newsletter">
+                                    <input id="yes" type="radio" name="newsletter" value="yes">
+                                    Yes
+                                </label>
+                                <label for="newsletter">
+                                    <input id="no" type="radio" name="newsletter" value="no">
+                                    No
+                                </label>
+                                <h5>If Yes: Which categories are you interested in?</h5>
+                                <label for="javascript">
+                                    <input id="javascript" type="checkbox" name="javascript" checked />
+                                    Javascript
+                                </label>
+                                <label for="css">
+                                    <input id="css" type="checkbox" name="css" />
+                                    CSS
+                                </label>
+                                <label for="html">
+                                    <input id="html" type="checkbox" name="html" />
+                                    HTML
+                                </label>                         
+                            </fieldset>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </article>
+                <aside class="app-sidebar">Sidebar</aside>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="inner">Footer</div>
+    </footer>   
+</body>
+</html>

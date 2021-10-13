@@ -1,8 +1,7 @@
 @font-face {
-  font-family:'Raleway' ;
-  src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf') format('ttf');
-  font-family: 'Alumi_Sans', cursive;
-  src: url('../fonts/Alumni_Sans/AlumniSans-VariableFont_wght.ttf') format('ttf');
+  font-family: "Exo 2";
+  src: url("../fonts/exo-2/exo2-bold.ttf") format("ttf"),
+    url("../fonts/exo-2/exo2-regular.ttf") format("ttf");
 }
 
 body {
@@ -15,7 +14,7 @@ body {
 }
 
 .color-red {
-  color: burlywood;
+  color: red;
 }
 
 /*Mobile 320px
@@ -24,6 +23,7 @@ Desktop 1080px*/
 
 main img {
   width: 100%;
+  max-width: 620px;
   margin: 0 auto 0 auto;
   display: block;
 }
@@ -67,7 +67,7 @@ a:link, a:visited, a:active, a:hover */
 }
 
 .app-navigation a:hover {
-  color: bisque;
+  color: rgb(71, 236, 112);
 }
 
 /*hamburger menu:*/
@@ -99,16 +99,33 @@ a:link, a:visited, a:active, a:hover */
   transform: translateY(0%);
 }
 
+/*To make the screen 2 colomns on desktop, and 1 colomn on mobile:
+The last 5% is to add padding, border and margin later*/
+
+@media screen and (min-width: 767px) {
+  .app-article {
+    display: inline-block;
+    border: 1px solid red;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: 1px solid green;
+    width: 35%;
+    vertical-align: top;
+  }
+}
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
-  font-family: "Raleway', sans-serif";
+  font-family: "Exo 2";
   font-weight: 500;
 }
 
 p {
-  font-family:'Alumni Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 form {
@@ -147,7 +164,7 @@ form h5 {
 }
 
 input[type="submit"] {
-  background-color: burlywood;
+  background-color: rgb(255, 94, 94);
   width: 100%;
   border: none;
   cursor: pointer;
@@ -156,7 +173,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: bisque;
+  background-color: rgb(255, 0, 0);
 }
 
 /*
@@ -174,38 +191,3 @@ input[type="email"] {
   background-color: #eee;
 }
 */
-
-/*To make the screen 2 colomns on desktop, and 1 colomn on mobile:
-The last 5% is to add padding, border and margin later*/
-/*CSS comment*/
-
-@media screen and (min-width: 767px) {
-  /*hamburger menu:*/
-.app-navigation-drawer {
-  transform: translateY(0%);
-  background: transparent;
-  border-bottom: none;
-  }
-
-
-.fa-bars {
-  display: none;
-
-}
-
-.app-navigation-drawer li {
-  display: inline-block;
-  
-}
-
-.app-article {
-    display: inline-block;
-    width: 50%;
-}
-
-.app-sidebar {
-    display: inline-block;
-    width: 35%;
-    vertical-align: top;
-  }
-}

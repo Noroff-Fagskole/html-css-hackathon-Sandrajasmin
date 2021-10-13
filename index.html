@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -18,10 +19,34 @@
                 <img src="./imgs/logo.png" alt="CSS Tricks">
             </a>        
             <nav class="app-navigation">
-                <a href="/">Home</a>
-                <a href="./about.html">About</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./login.html">Login</a>
+                <label for="hamburger-menu">
+                    <span class="sr-only">Hamburger menu</span>
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input id="hamburger-menu" type="checkbox" />
+
+                <ul class="app-navigation-drawer">
+                    <li>
+                        <a href="/">
+                        <i class="fas fa-home color-red"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html">
+                        <i class="fas fa-info color-red"></i>About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">
+                        <i class="fas fa-phone color-red"></i>Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./login.html">
+                        <i class="fas fa-sign-in-alt color-red"></i>Login
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -86,17 +111,23 @@
                     </ul>
                     <p>The important thing is to give the correct location of the CSS file, whether that’s on your web server, a CDN or some other server altogether.</p>
                     <p>Here are a few examples:</p>
-                            CODE
+
+                        CODE
+
                     <h2>The Sheet is Not Required for HTML</h2>
                     <p>You saw the example of a barebones web page above. No web page is required to use a stylesheet.</p>
                     <p>Also, we can technically write CSS directly in the HTML using the HTML style attribute. This is called inline styling and it goes a little something like this if you imagine you’re looking at the code of an HTML file:</p>
-                            CODE
+                            
+                        CODE
+
                     <h2>While that’s possible, there are three serious strikes against writing styles this way:</h2>
                     <p>If you decide to use a stylesheet later, it is extremely difficult to override inline styles with the styles in the HTML. Inline styles take priority over styles in a sheet.
                         Maintaining all of those styles is tough if you need to make a “quick” change and it makes the HTML hard to read.
                         There’s something weird about saying we’re writing CSS inline when there really is no cascade or sheet. All we’re really writing are styles.
                         There is a second way to write CSS in the HTML and that’s directly in the head in a style block: </p>
-                            CODE
+                            
+                        CODE
+
                     <p>That does indeed make the HTML easier to read, already making it better than inline styling. Still, it’s hard to manage all styles this way because it has to be managed on each and every webpage of a site, meaning one “quick” change might have to be done several times, depending on how many pages we’re dealing with.</p>
                     <p>An external sheet that can be called once in the head is usually your best bet.</p>
                     <h2>The Sheet is Important</h2>
@@ -110,7 +141,11 @@
                         When Using !important is The Right Choice – This article is a perfect call-and-response to the previous article about why that method may not be best practice.</p>
                     <p>credit: https://css-tricks.com/css-basics-second-s-css/</p>
                 </article>
-                    <aside class="app-sidebar">sidebar</aside>
+                    <aside class="app-sidebar">
+                        <figure>
+                            <img src="./imgs/advert-1.png" alt="advert-1" />
+                        </figure>
+                    </aside>
             </section>
         </div>
     </main>
